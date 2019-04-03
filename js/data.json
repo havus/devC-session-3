@@ -1,4 +1,4 @@
-let obj = [{
+[{
         "name": "Alderaan",
         "rotation_period": "24",
         "orbital_period": "364",
@@ -217,25 +217,4 @@ let obj = [{
         "edited": "2014-12-20T20:58:18.437000Z",
         "url": "https://swapi.co/api/planets/11/"
     }
-];
-
-
-
-let text = "";
-
-obj.forEach(data => {
-    text += `<tr>
-    <td>${data.name}</td>
-    <td>${data.rotation_period}</td>
-    <td>${data.orbital_period}</td>
-    <td>${data.diameter}</td>
-    <td>${data.climate}</td>
-    <td>${data.gravity}</td>
-    <td>${data.terrain}</td>
-    <td>${data.surface_water}</td>
-    <td>${data.population}</td>
-    <td>${data.created}</td>
-    <td>${data.edited}</td>
-    <td>${data.url}</td>`
-});
-document.getElementsByTagName("tbody")[0].innerHTML = text;
+]
