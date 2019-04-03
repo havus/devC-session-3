@@ -239,3 +239,32 @@ obj.forEach(data => {
     <td>${data.url}</td>`
 });
 document.getElementsByTagName("tbody")[0].innerHTML = text;
+
+
+function cari(inputan) {
+    // baca semua data
+    let hasil = '';
+    for (let i = 0; i < obj.length; i++) {
+        if (obj[i].name == inputan || obj[i].rotation_period == inputan || obj[i].orbital_period == inputan || obj[i].diameter == inputan || obj[i].climate == inputan || obj[i].gravity == inputan || obj[i].terrain == inputan || obj[i].surface_water == inputan || obj[i].population == inputan || obj[i].created == inputan || obj[i].edited == inputan || obj[i].url == inputan) {
+            hasil += `
+            <tr>
+                <td>${obj[i].name}</td>
+                <td>${obj[i].rotation_period}</td>
+                <td>${obj[i].orbital_period}</td>
+                <td>${obj[i].diameter}</td>
+                <td>${obj[i].climate}</td>
+                <td>${obj[i].gravity}</td>
+                <td>${obj[i].terrain}</td>
+                <td>${obj[i].surface_water}</td>
+                <td>${obj[i].population}</td>
+                <td>${obj[i].created}</td>
+                <td>${obj[i].edited}</td>
+                <td>${obj[i].url}</td>
+            </tr>`;
+            document.getElementById('el').innerHTML = hasil;
+        } else {
+            document.getElementsByClassName('table')[0].innerHTML = `<h1 class="text-center"> No Result </h1>`;
+        }
+    }
+    // console.log(inputan);
+}
