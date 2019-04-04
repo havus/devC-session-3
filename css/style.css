@@ -4,8 +4,16 @@ body {
     margin: 0;
 }
 
+.header {
+    margin: 20px;
+}
+
 .main {
     margin: 20px;
     border-radius: 20px;
     overflow: hidden;
+}
+
+.dropdown {
+	display: inline-block !important;
 }

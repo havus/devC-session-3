@@ -219,10 +219,7 @@ let obj = [{
     }
 ];
 
-
-
 let text = "";
-
 obj.forEach(data => {
     text += `<tr>
     <td>${data.name}</td>
@@ -239,7 +236,6 @@ obj.forEach(data => {
     <td>${data.url}</td>`
 });
 document.getElementsByTagName("tbody")[0].innerHTML = text;
-
 
 function cari(inputan) {
     // baca semua data
@@ -261,10 +257,31 @@ function cari(inputan) {
                 <td>${obj[i].edited}</td>
                 <td>${obj[i].url}</td>
             </tr>`;
-            document.getElementById('el').innerHTML = hasil;
-        } else {
-            document.getElementsByClassName('table')[0].innerHTML = `<h1 class="text-center"> No Result </h1>`;
         }
     }
+    document.getElementById('el').innerHTML = hasil;
     // console.log(inputan);
 }
+
+// function sortirAsc() {
+    // let awal = [];
+    // for (let i = 0; i < obj.length; i++) {
+    //     awal.push(obj[i].name);
+    // }
+    // awal = awal.sort();
+    // console.log(awal);
+
+    // let nilai = [];
+    // for (let i = 0; i < awal.length; i++){  
+    //     if (awal[i] == )
+    // }
+// }
+
+// employees.sort(function(a, b){
+//     var nameA=a.name.toLowerCase(), nameB=b.name.toLowerCase()
+//     if (nameA < nameB) //sort string ascending
+//         return -1 
+//     if (nameA > nameB)
+//         return 1
+//     return 0 //default return value (no sorting)
+// })
